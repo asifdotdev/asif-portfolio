@@ -480,6 +480,7 @@ function Navigation({
       <a className="nav-mark" href="#top" aria-label="Muhammad Asif Aqeel">
         <span>Asif</span>
       </a>
+      <span className="nav-status">Building cool stuff</span>
       <nav className="desktop-nav" aria-label="Primary navigation">
         {links.map(([label, href]) => (
           <a key={href} href={href}>

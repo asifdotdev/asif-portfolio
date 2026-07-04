@@ -97,6 +97,14 @@ button {
   letter-spacing: 0;
 }
 
+.nav-status {
+  justify-self: start;
+  margin-left: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .desktop-nav {
   display: flex;
   justify-content: center;
