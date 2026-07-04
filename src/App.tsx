@@ -480,7 +480,6 @@ function Navigation({
       <a className="nav-mark" href="#top" aria-label="Muhammad Asif Aqeel">
         <span>Asif</span>
       </a>
-      <span className="nav-status">Building cool stuff</span>
       <nav className="desktop-nav" aria-label="Primary navigation">
         {links.map(([label, href]) => (
           <a key={href} href={href}>
@@ -537,7 +536,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            Software Engineer
+            Building cool stuff
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 26 }}
