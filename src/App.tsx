@@ -546,17 +546,15 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            Hello
+            Software Engineer
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.05 }}
           >
-            <span>I'm Muhammad</span>
-            <span>Asif Aqeel.</span>
-            <span>Software</span>
-            <span>Engineer.</span>
+            <span>Muhammad</span>
+            <span>Asif Aqeel</span>
           </motion.h1>
           <motion.p
             className="hero-copy"
@@ -565,7 +563,7 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.12 }}
           >
             <span>Based in Lahore, Pakistan.</span>
-            <span>I build reliable product software.</span>
+            <span>React Native, web products, backend APIs, and developer tools.</span>
           </motion.p>
           <motion.div
             className="hero-actions"
@@ -1287,8 +1285,8 @@ function Footer() {
   return (
     <footer id="contact">
       <div>
-        <p className="kicker">Available for serious product work</p>
-        <h2>Software engineering for products that need to work.</h2>
+        <p className="kicker">Contact</p>
+        <h2>Available for product engineering work.</h2>
       </div>
       <div className="footer-links">
         <a href="mailto:asifaqeel50@gmail.com">
