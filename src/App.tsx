@@ -7,11 +7,8 @@ import {
   Image,
   Link as LinkIcon,
   Menu,
-  Pencil,
-  Plus,
   Save,
   Server,
-  Trash2,
   Upload,
   X,
 } from "lucide-react";
@@ -440,12 +437,7 @@ function App() {
         setMobileMenuOpen={setMobileMenuOpen}
       />
       <Hero />
-      <ProjectShowcase
-        projects={projects}
-        onEdit={openEditProject}
-        onDelete={deleteProject}
-        onAdd={openNewProject}
-      />
+      <ProjectShowcase projects={projects} />
       <OpenSourceShowcase projects={openSourceProjects} />
       <Footer />
       <ProjectDrawer
@@ -560,27 +552,11 @@ function Hero() {
   );
 }
 
-function ProjectShowcase({
-  projects,
-  onEdit,
-  onDelete,
-  onAdd,
-}: {
-  projects: Project[];
-  onEdit: (project: Project) => void;
-  onDelete: (id: string) => void;
-  onAdd: () => void;
-}) {
+function ProjectShowcase({ projects }: { projects: Project[] }) {
   return (
     <section className="projects-shell" id="work">
       <div className="work-heading">
         <h2>Work.</h2>
-        <div className="section-actions">
-          <button className="ghost-btn" type="button" onClick={onAdd}>
-            <Plus size={17} />
-            Add Project
-          </button>
-        </div>
       </div>
 
       <div className="project-list">
@@ -589,8 +565,6 @@ function ProjectShowcase({
             project={project}
             index={index}
             key={project.id}
-            onEdit={onEdit}
-            onDelete={onDelete}
           />
         ))}
       </div>
@@ -648,7 +622,6 @@ function OpenSourceCard({
             <ExternalLink size={18} />
             View GitHub
           </a>
-          <span>{project.year}</span>
         </div>
       </div>
 
@@ -848,13 +821,9 @@ function SopThumbnail() {
 function ProjectSection({
   project,
   index,
-  onEdit,
-  onDelete,
 }: {
   project: Project;
   index: number;
-  onEdit: (project: Project) => void;
-    onDelete: (id: string) => void;
 }) {
   const isApex = project.id === "apex-codegen";
   const screenshots = project.screenshots.length
@@ -881,16 +850,6 @@ function ProjectSection({
           <ProjectLinkBadge url={project.projectUrl} />
           <StoreBadge type="apple" url={project.appStoreUrl} />
           <StoreBadge type="play" url={project.playStoreUrl} />
-        </div>
-        <div className="project-admin">
-          <button className="tiny-btn" type="button" onClick={() => onEdit(project)}>
-            <Pencil size={15} />
-            Edit
-          </button>
-          <button className="tiny-btn danger" type="button" onClick={() => onDelete(project.id)}>
-            <Trash2 size={15} />
-            Delete
-          </button>
         </div>
       </div>
 

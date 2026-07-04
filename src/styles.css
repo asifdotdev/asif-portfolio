@@ -408,12 +408,6 @@ button {
   letter-spacing: 0;
 }
 
-.section-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .project-list {
   display: grid;
   gap: 18px;
@@ -564,12 +558,6 @@ button {
   color: var(--muted);
   font-size: 10px;
   font-weight: 700;
-}
-
-.project-admin {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
 }
 
 .screen-rail {
@@ -1827,7 +1815,6 @@ footer h2 {
     align-items: end;
   }
 
-  .project-admin,
   .store-row {
     justify-content: flex-end;
   }
@@ -1919,11 +1906,6 @@ footer h2 {
     grid-template-columns: 1fr;
   }
 
-  .section-actions {
-    align-items: stretch;
-    flex-direction: column;
-  }
-
   .project-section {
     min-height: 0;
     padding: 20px;
@@ -1995,7 +1977,6 @@ footer h2 {
     padding: 0 16px 16px;
   }
 
-  .project-admin,
   .store-row {
     justify-content: flex-start;
   }
