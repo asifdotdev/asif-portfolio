@@ -437,6 +437,7 @@ function App() {
         setMobileMenuOpen={setMobileMenuOpen}
       />
       <Hero />
+      <About />
       <ProjectShowcase projects={projects} />
       <OpenSourceShowcase projects={openSourceProjects} />
       <Footer />
@@ -461,6 +462,7 @@ function Navigation({
   setMobileMenuOpen: (open: boolean) => void;
 }) {
   const links = [
+    ["About", "#about"],
     ["Work", "#work"],
     ["Open Source", "#open-source"],
     ["Contact", "#contact"],
@@ -468,30 +470,24 @@ function Navigation({
 
   return (
     <header className="site-nav">
-      <a className="nav-mark" href="#top" aria-label="Muhammad Asif Aqeel">
-        <span>Asif</span>
-      </a>
       <nav className="desktop-nav" aria-label="Primary navigation">
         {links.map(([label, href]) => (
           <a key={href} href={href}>
             {label}
           </a>
         ))}
-      </nav>
-      <div className="nav-actions">
-        <a className="ghost-btn compact" href={RESUME_URL} target="_blank" rel="noreferrer">
-          <FileText size={16} />
-          <span>Resume</span>
+        <a href={RESUME_URL} target="_blank" rel="noreferrer">
+          Resume
         </a>
-        <button
-          className="icon-btn mobile-menu-btn"
-          type="button"
-          aria-label="Open menu"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
-        </button>
-      </div>
+      </nav>
+      <button
+        className="icon-btn mobile-menu-btn"
+        type="button"
+        aria-label="Open menu"
+        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+      >
+        {mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}
+      </button>
       <AnimatePresence>
         {mobileMenuOpen ? (
           <motion.div
@@ -512,6 +508,30 @@ function Navigation({
         ) : null}
       </AnimatePresence>
     </header>
+  );
+}
+
+function About() {
+  return (
+    <section className="about-section" id="about">
+      <div className="section-heading">
+        <h2>About.</h2>
+      </div>
+      <div className="about-copy">
+        <p>
+          I build software that moves from idea to production with clean architecture,
+          practical automation, and careful execution.
+        </p>
+        <p>
+          Recently, I built an AI codegen platform with custom agents for UI generation,
+          backend generation, API integration, automated testing, fixing, QA validation,
+          and developer handoff.
+        </p>
+        <p>
+          Currently focused on systems that help teams ship faster without losing quality.
+        </p>
+      </div>
+    </section>
   );
 }
 
@@ -1218,8 +1238,8 @@ function Footer() {
   return (
     <footer id="contact">
       <div>
-        <p className="kicker">Contact</p>
-        <h2>Let's talk.</h2>
+        <h2>Contact.</h2>
+        <p className="footer-copy">Available for work. Send a note or connect on LinkedIn.</p>
       </div>
       <div className="footer-links">
         <a href="mailto:asifaqeel50@gmail.com">
