@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   BriefcaseBusiness,
   Check,
   Copy,
@@ -555,21 +554,6 @@ function Hero() {
             <span>Based in Lahore, Pakistan.</span>
             <span>Building cool stuff.</span>
           </motion.p>
-          <motion.div
-            className="hero-actions"
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.18 }}
-          >
-            <a className="primary-btn" href="#work">
-              View Work
-              <ArrowRight size={18} />
-            </a>
-            <a className="glass-btn" href={RESUME_URL} target="_blank" rel="noreferrer">
-              <FileText size={18} />
-              Resume
-            </a>
-          </motion.div>
         </div>
       </div>
     </section>
