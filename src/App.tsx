@@ -437,7 +437,6 @@ function App() {
     <main>
       <motion.div className="scroll-progress" style={{ scaleX }} />
       <Navigation
-        onAddProject={openNewProject}
         mobileMenuOpen={mobileMenuOpen}
         setMobileMenuOpen={setMobileMenuOpen}
       />
@@ -464,11 +463,9 @@ function App() {
 }
 
 function Navigation({
-  onAddProject,
   mobileMenuOpen,
   setMobileMenuOpen,
 }: {
-  onAddProject: () => void;
   mobileMenuOpen: boolean;
   setMobileMenuOpen: (open: boolean) => void;
 }) {
@@ -481,7 +478,7 @@ function Navigation({
   return (
     <header className="site-nav">
       <a className="nav-mark" href="#top" aria-label="Muhammad Asif Aqeel">
-        <span>MA</span>
+        <span>Asif</span>
       </a>
       <nav className="desktop-nav" aria-label="Primary navigation">
         {links.map(([label, href]) => (
@@ -495,10 +492,6 @@ function Navigation({
           <FileText size={16} />
           <span>Resume</span>
         </a>
-        <button className="ghost-btn compact" type="button" onClick={onAddProject}>
-          <Plus size={16} />
-          <span>Add Project</span>
-        </button>
         <button
           className="icon-btn mobile-menu-btn"
           type="button"
@@ -524,9 +517,6 @@ function Navigation({
             <a href={RESUME_URL} target="_blank" rel="noreferrer">
               Resume
             </a>
-            <button type="button" onClick={onAddProject}>
-              Add Project
-            </button>
           </motion.div>
         ) : null}
       </AnimatePresence>
@@ -1286,7 +1276,7 @@ function Footer() {
     <footer id="contact">
       <div>
         <p className="kicker">Contact</p>
-        <h2>Available for software engineering work.</h2>
+        <h2>Let's talk.</h2>
       </div>
       <div className="footer-links">
         <a href="mailto:asifaqeel50@gmail.com">

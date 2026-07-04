@@ -73,39 +73,34 @@ button {
 
 .site-nav {
   position: fixed;
-  top: 16px;
+  top: 18px;
   left: 50%;
   z-index: 100;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  width: min(calc(100% - 32px), 1180px);
-  min-height: 58px;
-  padding: 8px;
-  border: 1px solid rgba(244, 241, 232, 0.14);
-  border-radius: 999px;
-  background: rgba(8, 9, 9, 0.78);
-  backdrop-filter: blur(22px);
-  box-shadow: 0 22px 80px rgba(0, 0, 0, 0.38);
+  width: min(calc(100% - 48px), 1180px);
+  min-height: 46px;
+  padding: 0;
+  border: 0;
+  background: transparent;
   transform: translateX(-50%);
 }
 
 .nav-mark {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #f4f1e8;
-  color: #080909;
-  font-family: Georgia, serif;
-  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .desktop-nav {
   display: flex;
   justify-content: center;
-  gap: 8px;
+  gap: 22px;
 }
 
 .desktop-nav a,
@@ -113,22 +108,20 @@ button {
 .mobile-nav button {
   display: inline-flex;
   align-items: center;
-  min-height: 40px;
-  padding: 0 16px;
+  min-height: 36px;
+  padding: 0;
   border: 0;
-  border-radius: 999px;
   background: transparent;
   color: var(--muted);
+  font-size: 14px;
   cursor: pointer;
   transition:
-    color 160ms ease,
-    background 160ms ease;
+    color 160ms ease;
 }
 
 .desktop-nav a:hover,
 .mobile-nav a:hover,
 .mobile-nav button:hover {
-  background: rgba(244, 241, 232, 0.1);
   color: var(--ink);
 }
 
@@ -136,6 +129,21 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+
+.site-nav .ghost-btn.compact {
+  min-height: 36px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.site-nav .ghost-btn.compact:hover {
+  color: var(--ink);
+  transform: none;
 }
 
 .mobile-nav {
