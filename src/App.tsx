@@ -528,7 +528,7 @@ function About() {
           and developer handoff.
         </p>
         <p>
-          Currently focused on systems that help teams ship faster without losing quality.
+          Currently focused on AI Systems that help teams ship faster without losing quality.
         </p>
       </div>
     </section>
