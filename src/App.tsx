@@ -536,7 +536,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            Building cool stuff
+            Software Engineer
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 26 }}
@@ -553,7 +553,7 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.12 }}
           >
             <span>Based in Lahore, Pakistan.</span>
-            <span>Building apps, tools, and systems.</span>
+            <span>Building cool stuff.</span>
           </motion.p>
           <motion.div
             className="hero-actions"
