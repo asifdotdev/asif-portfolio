@@ -298,10 +298,10 @@ button {
 
 .hero {
   position: relative;
-  min-height: 86svh;
+  min-height: 68svh;
   display: grid;
   align-items: center;
-  padding: 132px 24px 64px;
+  padding: 118px 24px 28px;
   overflow: hidden;
   isolation: isolate;
 }
@@ -337,7 +337,7 @@ button {
 
 .hero-layout {
   width: min(calc(100% - 40px), var(--max));
-  min-height: calc(86svh - 196px);
+  min-height: 0;
   margin: 0 auto;
 }
 
@@ -382,13 +382,6 @@ button {
   display: block;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 34px;
-}
-
 .glass-btn.muted {
   color: var(--muted);
 }
@@ -396,7 +389,7 @@ button {
 .projects-shell {
   width: min(calc(100% - 48px), var(--max));
   margin: 0 auto;
-  padding: 96px 0 40px;
+  padding: 48px 0 40px;
 }
 
 .work-heading {
