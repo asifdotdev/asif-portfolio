@@ -563,7 +563,7 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.12 }}
           >
             <span>Based in Lahore, Pakistan.</span>
-            <span>React Native, web products, backend APIs, and developer tools.</span>
+            <span>Building apps, tools, and systems.</span>
           </motion.p>
           <motion.div
             className="hero-actions"
@@ -1286,7 +1286,7 @@ function Footer() {
     <footer id="contact">
       <div>
         <p className="kicker">Contact</p>
-        <h2>Available for product engineering work.</h2>
+        <h2>Available for software engineering work.</h2>
       </div>
       <div className="footer-links">
         <a href="mailto:asifaqeel50@gmail.com">
